@@ -1,0 +1,221 @@
+{
+  "units": "positions in mm and in LDU (2.5 LDU per mm), in the part's own frame",
+  "frame": "origin at the product centre; -Y out of the screen, +Y out of the back; +X toward the side-button edge; +Z toward the top (receiver) end",
+  "extent": {
+    "mm": {
+      "x": [
+        -37.35,
+        37.35
+      ],
+      "y": [
+        -2.82,
+        8.5
+      ],
+      "z": [
+        -78.09,
+        78.09
+      ]
+    },
+    "note": "Y runs from the screen to the top of the lens rings (5.64 + 5.68)"
+  },
+  "cameras": {
+    "main": {
+      "name": "rear camera",
+      "window": {
+        "mm": [
+          21.06,
+          8.5,
+          61.8
+        ],
+        "ldu": [
+          52.65,
+          21.25,
+          154.5
+        ],
+        "note": "centre of the lens window, drawn flush with the ring top (its depth is not given)"
+      },
+      "coneApex": {
+        "mm": [
+          21.06,
+          4.1,
+          61.8
+        ],
+        "ldu": [
+          52.65,
+          10.25,
+          154.5
+        ],
+        "source": "dimensioned: sheet 3, Section S-S: 6.92 REAR CAMERA KEEPOUT CONE TO COVER GLASS",
+        "note": "the keepout cone's apex: the drawing's own optical reference; the lens's entrance pupil is near it but not given"
+      },
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "keepoutCone": {
+        "fullAngleDeg": 84,
+        "source": "dimensioned: sheet 3, Section S-S: 84° REAR CAMERA KEEPOUT CONE",
+        "note": "nothing of a mount may enter this cone from its apex: a design check, not the field of view"
+      },
+      "fieldOfView": {
+        "focalPx": 3028.7,
+        "diagonal": 79.52,
+        "long": 67.3,
+        "short": 53.06,
+        "image": [
+          4032,
+          3024
+        ],
+        "source": "derived from spec: 48MP Fusion Main: 26 mm focal length",
+        "note": "pinhole model of the 4:3 still; the image's long side runs along the phone's length (Z). Video (16:9) crops the short side"
+      },
+      "sources": {
+        "fromSide": "dimensioned: sheet 1, Detail D: 16.29 (REAR CAMERA)",
+        "fromTop": "dimensioned: sheet 1, Detail D: 3X -16.29 (the camera, the rear mic and the flash)"
+      }
+    },
+    "identity": "inferred: one rear camera, the 48MP Fusion: its 84° cone encloses a 26 mm equivalent's 79.5° diagonal"
+  },
+  "flash": {
+    "mm": [
+      -21.07,
+      5.85,
+      61.8
+    ],
+    "diameter": 6.3,
+    "sources": [
+      "dimensioned: sheet 1, Detail D: 58.42 FLASH",
+      "dimensioned: sheet 1, Detail D: 3X -16.29"
+    ],
+    "keepout": {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "apexFromFront": {
+        "mm": 5.04,
+        "source": "derived: sheet 3, Section T-T: not dimensioned; the 82° cone through its Ø6.13 base at 8.57: 8.57 - 3.065 / tan 41°"
+      },
+      "innerConeDeg": {
+        "fullAngle": 82,
+        "source": "dimensioned: sheet 3, Sections T-T and U-U: 82° FLASH INNER KEEPOUT CONE V-FOV and H-FOV"
+      },
+      "outerConeDeg": {
+        "fullAngle": 157,
+        "source": "dimensioned: sheet 3, Sections T-T and U-U: 157° FLASH OUTER KEEPOUT CONE V-FOV and H-FOV"
+      },
+      "transitionFromFront": {
+        "mm": 10.37,
+        "source": "dimensioned: sheet 3, Section T-T: 10.37 (unlabelled), its arrows on the front face and the kinks' extension line (U-U draws the same line, (1.80) beyond the 8.57)"
+      },
+      "outerApexFromFront": {
+        "mm": 9.43,
+        "source": "derived: sheet 3, Section T-T: not dimensioned; the 157° cone through its kinks: 10.37 - (3.065 + 1.80 tan 41°) / tan 78.5° = 9.428 (U-U's numbers give 9.441)"
+      },
+      "innerBaseDiameter": {
+        "mm": 6.13,
+        "source": "dimensioned: sheet 3, Section T-T: 6.13 FLASH INNER KEEPOUT CONE BASE DIAMETER, at 8.57 from the front (its extension lines end short of the base, which T-T draws Ø6.00; across, Section U-U gives 6.00: flashKeepoutAcross): the larger taken"
+      },
+      "note": "cones about the flash's axis, their apex inside the phone, measured from the front (screen) face as the section dimensions them"
+    }
+  },
+  "rearMic": {
+    "mm": [
+      -13.99,
+      5.85,
+      61.8
+    ],
+    "diameter": 2.3,
+    "sources": [
+      "dimensioned: sheet 1, Detail D: 51.34 REAR MIC",
+      "dimensioned: sheet 1, Detail D: 3X -16.29",
+      "dimensioned: sheet 1, Detail D: Ø2.30 REAR MIC"
+    ]
+  },
+  "magsafe": {
+    "centre": {
+      "mm": [
+        0,
+        2.82,
+        -0.25
+      ],
+      "ldu": [
+        0,
+        7.05,
+        -0.625
+      ],
+      "sources": [
+        "dimensioned: sheet 4, 37.35 PRODUCT CENTER (74.70 / 2)",
+        "dimensioned: sheet 4, 78.34 PRODUCT CENTER (not 156.18 / 2 = 78.09: the circle is drawn round the 78.34 line)"
+      ]
+    },
+    "clear": {
+      "diameter": 61.5,
+      "source": "dimensioned: sheet 4, Ø61.50: DO NOT OBSTRUCT THIS AREA WITH METAL, CONDUCTIVE MATERIAL, OR MAGNETIC MATERIAL (its leader on the circle)",
+      "note": "keep clear of metal, conductive or magnetic material"
+    },
+    "magneticZone": {
+      "zFrom": 43.92,
+      "sidesToZ": -35.66,
+      "arc": {
+        "radius": 49.39,
+        "centre": {
+          "mm": [
+            0,
+            2.82,
+            -3.344
+          ]
+        },
+        "lowestZ": -52.734
+      },
+      "sources": [
+        "dimensioned: sheet 4, 34.17: the zone's top edge, the full width (the plateau's outline, scaled 34.16 in the back view)",
+        "dimensioned: sheet 4, 2X 113.75: where the zone's sides (the phone's) meet its arc",
+        "dimensioned: sheet 4, R49.39: the arc closing the zone below (DO NOT OBSTRUCT THIS AREA WITH MAGNETIC OR PERMEABLE MATERIAL EXCEPT MAGSAFE MAGNETS)"
+      ],
+      "note": "keep clear of magnetic or permeable material except MagSafe magnets: the full width from zFrom down to sidesToZ, closed below by the arc through (±W/2, sidesToZ); its centre derived from those corners"
+    },
+    "axis": [
+      0,
+      1,
+      0
+    ],
+    "note": "on the back glass, about the axis out of the back"
+  },
+  "cameraControl": {
+    "centre": {
+      "mm": [
+        37.35,
+        0,
+        -26.68
+      ],
+      "ldu": [
+        93.375,
+        0,
+        -66.7
+      ],
+      "note": "on the side-button side (+X), flush"
+    },
+    "length": 17.1,
+    "width": 2.53,
+    "keepout": {
+      "length": 25,
+      "width": 5.82,
+      "source": "dimensioned: sheet 2, Detail E: 25.00 CAMERA CONTROL KEEPOUT MEASURED FROM SURFACE (4X R2.20)",
+      "note": "a case or mount must leave this clear round it, measured at the surface"
+    }
+  },
+  "mass": {
+    "grams": 165,
+    "source": "spec: Weight: 5.82 ounces (165 grams)",
+    "note": "centre of mass not given; the product centre is an assumption"
+  },
+  "image": {
+    "width": 4032,
+    "height": 3024,
+    "kind": "third-party",
+    "from": "4:3, the shape of the Fusion's 24MP default and 12MP stills; 4032 x 3024 is the usual 12MP size, not on the spec page"
+  }
+}

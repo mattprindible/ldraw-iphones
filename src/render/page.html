@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="importmap">
+  { "imports": { "three": "/three/build/three.module.js", "three/addons/": "/three/examples/jsm/" } }
+</script>
+</head>
+<body style="margin:0">
+<script type="module">
+  import * as THREE from 'three';
+  import { LDrawLoader } from 'three/addons/loaders/LDrawLoader.js';
+  import { LDrawConditionalLineMaterial } from 'three/addons/materials/LDrawConditionalLineMaterial.js';
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+  document.body.appendChild(renderer.domElement);
+  const loader = new LDrawLoader();
+  loader.setConditionalLineMaterial(LDrawConditionalLineMaterial);
+  loader.setPartsLibraryPath('/ldraw/');
+  const ready = loader.preloadMaterials('/ldraw/LDConfig.ldr');
+
+  /**
+   * Renders LDraw text with an orthographic camera, like printed instructions. `view` is the direction from the
+   * model toward the camera in LDraw axes (-Y up). `frame` optionally fixes the fitted box (LDraw coords) so a
+   * sequence of steps can share one scale.
+   */
+  window.renderLDraw = async (text, opts = {}) => {
+    const { width = 800, height = 600, view = [-1, -0.9, -1.4], padding = 1.1, background = '#ffffff', frame } = opts;
+    await ready;
+    const group = await new Promise((resolve, reject) => loader.parse(text, resolve, reject));
+    // Line art, like an instruction drawing: white faces that hide what's behind them, black visible edges.
+    if (opts.lineArt) {
+      const face = new THREE.MeshBasicMaterial({ color: 0xffffff, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
+      group.traverse((o) => {
+        if (o.isMesh) o.material = face;
+        else if (o.isLineSegments) {
+          // A part with edges in several colours (its own, plus fixed-colour subparts) has an array.
+          const black = (m) => {
+            m = m.clone();
+            if (m.uniforms?.diffuse) m.uniforms.diffuse.value.set(0x000000);
+            else if (m.color) m.color.set(0x000000);
+            if (m.uniforms?.opacity) m.uniforms.opacity.value = 1;
+            m.opacity = 1;
+            m.transparent = false;
+            return m;
+          };
+          o.material = Array.isArray(o.material) ? o.material.map(black) : black(o.material);
+        }
+      });
+    }
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(background);
+    // Work in LDraw coordinates and flip the camera's up vector instead of the model.
+    scene.add(group);
+    // Bright, flat-ish light like printed instructions: white should read as white, not gray.
+    scene.add(new THREE.HemisphereLight(0xffffff, 0xc8c8c8, 3.2));
+    const sun = new THREE.DirectionalLight(0xffffff, 1.1);
+    sun.position.set(-0.6, -1, -0.4);
+    scene.add(sun);
+    group.updateMatrixWorld(true);
+
+    const box = frame ? new THREE.Box3(new THREE.Vector3(...frame.min), new THREE.Vector3(...frame.max)) : new THREE.Box3().setFromObject(group);
+    const center = box.getCenter(new THREE.Vector3());
+    const radius = box.getBoundingSphere(new THREE.Sphere()).radius || 1;
+    const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, radius * 20);
+    cam.up.set(0, -1, 0);
+    cam.position.copy(center).addScaledVector(new THREE.Vector3(...view).normalize(), radius * 5);
+    cam.lookAt(center);
+    cam.updateMatrixWorld(true);
+
+    // Fit the box's projected corners, keeping the output aspect ratio.
+    let [x0, x1, y0, y1] = [Infinity, -Infinity, Infinity, -Infinity];
+    for (const x of [box.min.x, box.max.x]) for (const y of [box.min.y, box.max.y]) for (const z of [box.min.z, box.max.z]) {
+      const p = new THREE.Vector3(x, y, z).applyMatrix4(cam.matrixWorldInverse);
+      [x0, x1, y0, y1] = [Math.min(x0, p.x), Math.max(x1, p.x), Math.min(y0, p.y), Math.max(y1, p.y)];
+    }
+    const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+    let hw = ((x1 - x0) / 2) * padding, hh = ((y1 - y0) / 2) * padding;
+    if (hw / hh > width / height) hh = hw * (height / width); else hw = hh * (width / height);
+    Object.assign(cam, { left: cx - hw, right: cx + hw, top: cy + hh, bottom: cy - hh });
+    cam.updateProjectionMatrix();
+
+    renderer.setPixelRatio(1);
+    renderer.setSize(width, height);
+    renderer.render(scene, cam);
+    const bounds = new THREE.Box3().setFromObject(group);
+    // The camera, so a caller can map world points to this image's pixels exactly.
+    const e = cam.matrixWorld.elements;
+    const camera = { eye: cam.position.toArray(), right: [e[0], e[1], e[2]], up: [e[4], e[5], e[6]], left: cam.left, rightEdge: cam.right, top: cam.top, bottom: cam.bottom, width, height };
+    return { png: renderer.domElement.toDataURL('image/png'), bounds: { min: bounds.min.toArray(), max: bounds.max.toArray() }, camera };
+  };
+  window.rendererReady = true;
+</script>
+</body>
+</html>

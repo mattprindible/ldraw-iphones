@@ -1,0 +1,246 @@
+{
+  "units": "positions in mm and in LDU (2.5 LDU per mm), in the part's own frame",
+  "frame": "origin at the product centre; -Y out of the screen, +Y out of the back; +X toward the side-button edge; +Z toward the top (receiver) end",
+  "extent": {
+    "mm": {
+      "x": [
+        -32.105,
+        32.105
+      ],
+      "y": [
+        -3.695,
+        5.205
+      ],
+      "z": [
+        -65.75,
+        65.75
+      ]
+    },
+    "note": "Y runs from the screen to the top of the lens rings (7.39 + 1.51)"
+  },
+  "cameras": {
+    "ultraWide": {
+      "name": "rear camera 1",
+      "window": {
+        "mm": [
+          21.435,
+          5.205,
+          55.08
+        ],
+        "ldu": [
+          53.587,
+          13.013,
+          137.7
+        ],
+        "note": "centre of the lens window, drawn flush with the ring top (its depth is not given)"
+      },
+      "coneApex": {
+        "mm": [
+          21.435,
+          2.505,
+          55.08
+        ],
+        "ldu": [
+          53.587,
+          6.263,
+          137.7
+        ],
+        "source": "dimensioned: sheet 2, Section F-F: 6.20 REAR CAMERA 1 KEEPOUT CONE TO COVER GLASS",
+        "note": "the keepout cone's apex: the drawing's own optical reference; the lens's entrance pupil is near it but not given"
+      },
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "keepoutCone": {
+        "fullAngleDeg": 131,
+        "source": "dimensioned: sheet 2, Section F-F: 131° REAR CAMERA 1 KEEPOUT CONE (the upper cone: F-F runs down the cameras' column, the phone's top at the top)",
+        "note": "nothing of a mount may enter this cone from its apex: a design check, not the field of view"
+      },
+      "fieldOfView": {
+        "focalPx": 1454.9,
+        "diagonal": 120,
+        "long": 108.36,
+        "short": 92.2,
+        "image": [
+          4032,
+          3024
+        ],
+        "source": "spec: Ultra Wide: ƒ/2.4 aperture and 120° field of view",
+        "note": "pinhole model of the 4:3 still; the image's long side runs along the phone's length (Z). Video (16:9) crops the short side"
+      },
+      "sources": {
+        "fromSide": "dimensioned: sheet 1, Detail D: 2X 10.67 (rear cameras 1 and 2, across)",
+        "fromTop": "dimensioned: sheet 1, Detail D: -10.67 REAR CAMERA 1"
+      }
+    },
+    "main": {
+      "name": "rear camera 2",
+      "window": {
+        "mm": [
+          21.435,
+          5.205,
+          40.8
+        ],
+        "ldu": [
+          53.587,
+          13.013,
+          102
+        ],
+        "note": "centre of the lens window, drawn flush with the ring top (its depth is not given)"
+      },
+      "coneApex": {
+        "mm": [
+          21.435,
+          1.315,
+          40.8
+        ],
+        "ldu": [
+          53.587,
+          3.287,
+          102
+        ],
+        "source": "dimensioned: sheet 2, Section F-F: 5.01 REAR CAMERA 2 KEEPOUT CONE TO COVERGLASS",
+        "note": "the keepout cone's apex: the drawing's own optical reference; the lens's entrance pupil is near it but not given"
+      },
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "keepoutCone": {
+        "fullAngleDeg": 82,
+        "source": "dimensioned: sheet 2, Section F-F: 82° REAR CAMERA 2 KEEPOUT CONE",
+        "note": "nothing of a mount may enter this cone from its apex: a design check, not the field of view"
+      },
+      "fieldOfView": {
+        "focalPx": 3028.7,
+        "diagonal": 79.52,
+        "long": 67.3,
+        "short": 53.06,
+        "image": [
+          4032,
+          3024
+        ],
+        "source": "derived from third-party: 26 mm equivalent, widely reported from Apple's 2020 launch; not on the spec page",
+        "note": "pinhole model of the 4:3 still; the image's long side runs along the phone's length (Z). Video (16:9) crops the short side"
+      },
+      "sources": {
+        "fromSide": "dimensioned: sheet 1, Detail D: 2X 10.67 (rear cameras 1 and 2, across)",
+        "fromTop": "dimensioned: sheet 1, Detail D: -24.95 REAR CAMERA 2"
+      }
+    },
+    "identity": "inferred: camera 1 (the upper) is the Ultra Wide: its 131° keepout cone encloses the Ultra Wide's 120° (spec); camera 2's 82° the Main's ~80° (26 mm); and camera 2's apex is the deeper (5.01 against 6.20), as the 13s' Main's"
+  },
+  "flash": {
+    "mm": [
+      9.895,
+      4.425,
+      47.94
+    ],
+    "diameter": 5.66,
+    "sources": [
+      "dimensioned: sheet 1, Detail D: 2X 22.21 (the flash and the rear mic)",
+      "dimensioned: sheet 1, Detail D: -17.81 FLASH"
+    ],
+    "keepout": {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "apexFromFront": {
+        "mm": 6.94,
+        "source": "dimensioned: sheet 2, Section G-G: 6.94 FLASH KEEPOUT CONE ORIGIN TO COVER GLASS (its extension line ends at the inner cone's apex)"
+      },
+      "innerConeDeg": {
+        "fullAngle": 135,
+        "source": "dimensioned: sheet 2, Section G-G: 135° FLASH INNER KEEPOUT CONE"
+      },
+      "outerConeDeg": {
+        "fullAngle": 157,
+        "source": "dimensioned: sheet 2, Section G-G: 157° FLASH OUTER KEEPOUT CONE"
+      },
+      "transitionFromFront": {
+        "mm": 10.96,
+        "source": "dimensioned: sheet 2, Section G-G: 10.96 FLASH KEEPOUT CONE TRANSITION TO COVER GLASS (its extension line reaches the inner cone's kinks into the outer)"
+      },
+      "note": "cones about the flash's axis, their apex inside the phone, measured from the front (screen) face as the section dimensions them"
+    }
+  },
+  "rearMic": {
+    "mm": [
+      9.895,
+      4.425,
+      55.53
+    ],
+    "diameter": 2.4,
+    "sources": [
+      "dimensioned: sheet 1, Detail D: 2X 22.21 (the extension line through the mic's and the flash's centres)",
+      "dimensioned: sheet 1, Detail D: -10.22 REAR MIC",
+      "dimensioned: sheet 1, Detail D: 2 Ø 2.40 REAR MIC (the leader on the outer circle)"
+    ]
+  },
+  "magsafe": {
+    "centre": {
+      "mm": [
+        -0.005,
+        3.695,
+        0.01
+      ],
+      "ldu": [
+        -0.013,
+        9.237,
+        0.025
+      ],
+      "sources": [
+        "dimensioned: sheet 2, MagSafe view: 32.11 PRODUCT CENTER",
+        "dimensioned: sheet 2, MagSafe view: -65.74 PRODUCT CENTER"
+      ]
+    },
+    "clear": {
+      "diameter": 57.5,
+      "source": "derived: sheet 2, MagSafe view: 2X R 28.75, the clear area's arcs above and below, both on one circle round the product centre (measure.ts fits them): 2 x 28.75",
+      "note": "keep clear of metal, conductive or magnetic material"
+    },
+    "magneticZone": {
+      "zFrom": 31.8,
+      "sidesToZ": -37.53,
+      "arc": {
+        "radius": 49.39,
+        "centre": {
+          "mm": [
+            0,
+            3.695,
+            0.002
+          ]
+        },
+        "lowestZ": -49.388
+      },
+      "sources": [
+        "dimensioned: sheet 2, MagSafe view: -33.95, the zone's top edge, the full width (Detail D's -33.95, the bump's bottom)",
+        "dimensioned: sheet 2, MagSafe view: 2X -103.28, where the zone's sides (the phone's) meet its arc",
+        "dimensioned: sheet 2, MagSafe view: R 49.39, the arc closing the zone below"
+      ],
+      "note": "keep clear of magnetic or permeable material except MagSafe magnets: the full width from zFrom down to sidesToZ, closed below by the arc through (±W/2, sidesToZ); its centre derived from those corners"
+    },
+    "axis": [
+      0,
+      1,
+      0
+    ],
+    "note": "on the back glass, about the axis out of the back"
+  },
+  "mass": {
+    "grams": 135,
+    "source": "spec: Weight: 135 grams",
+    "note": "centre of mass not given; the product centre is an assumption"
+  },
+  "image": {
+    "width": 4032,
+    "height": 3024,
+    "kind": "third-party",
+    "from": "12MP (spec); 4032 x 3024 is the usual 4:3 still size, not on the spec page"
+  }
+}

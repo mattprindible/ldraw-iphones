@@ -1,0 +1,1342 @@
+[
+  {
+    "title": "iPhone 12 mini",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 120.83,
+          "hand": 120.83,
+          "how": "131.5 − 10.67"
+        },
+        "upside down": {
+          "scene": 10.67,
+          "hand": 10.67,
+          "how": "10.67"
+        },
+        "flat": {
+          "scene": 6.2,
+          "hand": 6.2,
+          "how": "6.2"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 106.55,
+          "hand": 106.55,
+          "how": "131.5 − 24.95"
+        },
+        "upside down": {
+          "scene": 24.95,
+          "hand": 24.95,
+          "how": "24.95"
+        },
+        "flat": {
+          "scene": 5.01,
+          "hand": 5.01,
+          "how": "5.01"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 12",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 133.98,
+          "hand": 133.98,
+          "how": "146.71 − 12.73"
+        },
+        "upside down": {
+          "scene": 12.73,
+          "hand": 12.73,
+          "how": "12.73"
+        },
+        "flat": {
+          "scene": 6.33,
+          "hand": 6.33,
+          "how": "6.33"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 119.7,
+          "hand": 119.7,
+          "how": "146.71 − 27.01"
+        },
+        "upside down": {
+          "scene": 27.01,
+          "hand": 27.01,
+          "how": "27.01"
+        },
+        "flat": {
+          "scene": 5.01,
+          "hand": 5.01,
+          "how": "5.01"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 12 Pro",
+    "cameras": {
+      "main": {
+        "upright": {
+          "scene": 134.55,
+          "hand": 134.55,
+          "how": "146.71 − 12.16"
+        },
+        "upside down": {
+          "scene": 12.16,
+          "hand": 12.16,
+          "how": "12.16"
+        },
+        "flat": {
+          "scene": 5.51,
+          "hand": 5.51,
+          "how": "5.51"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 119.13,
+          "hand": 119.13,
+          "how": "146.71 − 27.58"
+        },
+        "upside down": {
+          "scene": 27.58,
+          "hand": 27.58,
+          "how": "27.58"
+        },
+        "flat": {
+          "scene": 3.13,
+          "hand": 3.13,
+          "how": "3.13"
+        }
+      },
+      "ultraWide": {
+        "upright": {
+          "scene": 126.84,
+          "hand": 126.84,
+          "how": "146.71 − 19.87"
+        },
+        "upside down": {
+          "scene": 19.87,
+          "hand": 19.87,
+          "how": "19.87"
+        },
+        "flat": {
+          "scene": 6.77,
+          "hand": 6.77,
+          "how": "6.77"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 12 Pro Max",
+    "cameras": {
+      "telephoto": {
+        "upright": {
+          "scene": 147.41,
+          "hand": 147.41,
+          "how": "160.84 − 13.43"
+        },
+        "upside down": {
+          "scene": 13.43,
+          "hand": 13.43,
+          "how": "13.43"
+        },
+        "flat": {
+          "scene": 1.59,
+          "hand": 1.59,
+          "how": "1.59"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 129.94,
+          "hand": 129.94,
+          "how": "160.84 − 30.9"
+        },
+        "upside down": {
+          "scene": 30.9,
+          "hand": 30.9,
+          "how": "30.9"
+        },
+        "flat": {
+          "scene": 5.91,
+          "hand": 5.91,
+          "how": "5.91"
+        }
+      },
+      "ultraWide": {
+        "upright": {
+          "scene": 138.68,
+          "hand": 138.68,
+          "how": "160.84 − 22.16"
+        },
+        "upside down": {
+          "scene": 22.16,
+          "hand": 22.16,
+          "how": "22.16"
+        },
+        "flat": {
+          "scene": 7.66,
+          "hand": 7.66,
+          "how": "7.66"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 13 mini",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 120.65,
+          "hand": 120.65,
+          "how": "131.5 − 10.85"
+        },
+        "upside down": {
+          "scene": 10.85,
+          "hand": 10.85,
+          "how": "10.85"
+        },
+        "flat": {
+          "scene": 7.81,
+          "hand": 7.81,
+          "how": "7.81"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 108.29,
+          "hand": 108.29,
+          "how": "131.5 − 23.21"
+        },
+        "upside down": {
+          "scene": 23.21,
+          "hand": 23.21,
+          "how": "23.21"
+        },
+        "flat": {
+          "scene": 6.33,
+          "hand": 6.33,
+          "how": "6.33"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 13",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 134.82,
+          "hand": 134.82,
+          "how": "146.7 − 11.88"
+        },
+        "upside down": {
+          "scene": 11.88,
+          "hand": 11.88,
+          "how": "11.88"
+        },
+        "flat": {
+          "scene": 7.81,
+          "hand": 7.81,
+          "how": "7.81"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 122.46,
+          "hand": 122.46,
+          "how": "146.7 − 24.24"
+        },
+        "upside down": {
+          "scene": 24.24,
+          "hand": 24.24,
+          "how": "24.24"
+        },
+        "flat": {
+          "scene": 6.33,
+          "hand": 6.33,
+          "how": "6.33"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 13 Pro",
+    "cameras": {
+      "telephoto": {
+        "upright": {
+          "scene": 133.28,
+          "hand": 133.28,
+          "how": "146.71 − 13.43"
+        },
+        "upside down": {
+          "scene": 13.43,
+          "hand": 13.43,
+          "how": "13.43"
+        },
+        "flat": {
+          "scene": 2.96,
+          "hand": 2.96,
+          "how": "2.96"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 115.36,
+          "hand": 115.36,
+          "how": "146.71 − 31.35"
+        },
+        "upside down": {
+          "scene": 31.35,
+          "hand": 31.35,
+          "how": "31.35"
+        },
+        "flat": {
+          "scene": 7.27,
+          "hand": 7.27,
+          "how": "7.27"
+        }
+      },
+      "ultraWide": {
+        "upright": {
+          "scene": 124.32,
+          "hand": 124.32,
+          "how": "146.71 − 22.39"
+        },
+        "upside down": {
+          "scene": 22.39,
+          "hand": 22.39,
+          "how": "22.39"
+        },
+        "flat": {
+          "scene": 6.69,
+          "hand": 6.69,
+          "how": "6.69"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 13 Pro Max",
+    "cameras": {
+      "telephoto": {
+        "upright": {
+          "scene": 147.41,
+          "hand": 147.41,
+          "how": "160.84 − 13.43"
+        },
+        "upside down": {
+          "scene": 13.43,
+          "hand": 13.43,
+          "how": "13.43"
+        },
+        "flat": {
+          "scene": 3.1,
+          "hand": 3.1,
+          "how": "3.1"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 129.49,
+          "hand": 129.49,
+          "how": "160.84 − 31.35"
+        },
+        "upside down": {
+          "scene": 31.35,
+          "hand": 31.35,
+          "how": "31.35"
+        },
+        "flat": {
+          "scene": 7.27,
+          "hand": 7.27,
+          "how": "7.27"
+        }
+      },
+      "ultraWide": {
+        "upright": {
+          "scene": 138.45,
+          "hand": 138.45,
+          "how": "160.84 − 22.39"
+        },
+        "upside down": {
+          "scene": 22.39,
+          "hand": 22.39,
+          "how": "22.39"
+        },
+        "flat": {
+          "scene": 6.67,
+          "hand": 6.67,
+          "how": "6.67"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 14",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 134.83,
+          "hand": 134.83,
+          "how": "146.71 − 11.88"
+        },
+        "upside down": {
+          "scene": 11.88,
+          "hand": 11.88,
+          "how": "11.88"
+        },
+        "flat": {
+          "scene": 8.48,
+          "hand": 8.48,
+          "how": "8.48"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 122.08,
+          "hand": 122.08,
+          "how": "146.71 − 24.63"
+        },
+        "upside down": {
+          "scene": 24.63,
+          "hand": 24.63,
+          "how": "24.63"
+        },
+        "flat": {
+          "scene": 8.75,
+          "hand": 8.75,
+          "how": "8.75"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 14 Plus",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 148.29,
+          "hand": 148.29,
+          "how": "160.84 − 12.55"
+        },
+        "upside down": {
+          "scene": 12.55,
+          "hand": 12.55,
+          "how": "12.55"
+        },
+        "flat": {
+          "scene": 8.51,
+          "hand": 8.51,
+          "how": "8.51"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 135.54,
+          "hand": 135.54,
+          "how": "160.84 − 25.3"
+        },
+        "upside down": {
+          "scene": 25.3,
+          "hand": 25.3,
+          "how": "25.3"
+        },
+        "flat": {
+          "scene": 8.76,
+          "hand": 8.76,
+          "how": "8.76"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 14 Pro",
+    "cameras": {
+      "telephoto": {
+        "upright": {
+          "scene": 133.18,
+          "hand": 133.18,
+          "how": "147.46 − 14.28"
+        },
+        "upside down": {
+          "scene": 14.28,
+          "hand": 14.28,
+          "how": "14.28"
+        },
+        "flat": {
+          "scene": 4.02,
+          "hand": 4.02,
+          "how": "4.02"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 113.94,
+          "hand": 113.94,
+          "how": "147.46 − 33.52"
+        },
+        "upside down": {
+          "scene": 33.52,
+          "hand": 33.52,
+          "how": "33.52"
+        },
+        "flat": {
+          "scene": 7.84,
+          "hand": 7.84,
+          "how": "7.84"
+        }
+      },
+      "ultraWide": {
+        "upright": {
+          "scene": 123.56,
+          "hand": 123.56,
+          "how": "147.46 − 23.9"
+        },
+        "upside down": {
+          "scene": 23.9,
+          "hand": 23.9,
+          "how": "23.9"
+        },
+        "flat": {
+          "scene": 7.99,
+          "hand": 7.99,
+          "how": "7.99"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 14 Pro Max",
+    "cameras": {
+      "telephoto": {
+        "upright": {
+          "scene": 146.43,
+          "hand": 146.43,
+          "how": "160.71 − 14.28"
+        },
+        "upside down": {
+          "scene": 14.28,
+          "hand": 14.28,
+          "how": "14.28"
+        },
+        "flat": {
+          "scene": 4.12,
+          "hand": 4.12,
+          "how": "4.12"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 127.19,
+          "hand": 127.19,
+          "how": "160.71 − 33.52"
+        },
+        "upside down": {
+          "scene": 33.52,
+          "hand": 33.52,
+          "how": "33.52"
+        },
+        "flat": {
+          "scene": 7.8,
+          "hand": 7.8,
+          "how": "7.8"
+        }
+      },
+      "ultraWide": {
+        "upright": {
+          "scene": 136.81,
+          "hand": 136.81,
+          "how": "160.71 − 23.9"
+        },
+        "upside down": {
+          "scene": 23.9,
+          "hand": 23.9,
+          "how": "23.9"
+        },
+        "flat": {
+          "scene": 8.09,
+          "hand": 8.09,
+          "how": "8.09"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 15",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 134.91,
+          "hand": 134.91,
+          "how": "147.64 − 12.73"
+        },
+        "upside down": {
+          "scene": 12.73,
+          "hand": 12.73,
+          "how": "12.73"
+        },
+        "flat": {
+          "scene": 9.11,
+          "hand": 9.11,
+          "how": "9.11"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 122,
+          "hand": 122,
+          "how": "147.64 − 25.64"
+        },
+        "upside down": {
+          "scene": 25.64,
+          "hand": 25.64,
+          "how": "25.64"
+        },
+        "flat": {
+          "scene": 6.9,
+          "hand": 6.9,
+          "how": "6.9"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 15 Plus",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 148.16,
+          "hand": 148.16,
+          "how": "160.89 − 12.73"
+        },
+        "upside down": {
+          "scene": 12.73,
+          "hand": 12.73,
+          "how": "12.73"
+        },
+        "flat": {
+          "scene": 9.11,
+          "hand": 9.11,
+          "how": "9.11"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 135.25,
+          "hand": 135.25,
+          "how": "160.89 − 25.64"
+        },
+        "upside down": {
+          "scene": 25.64,
+          "hand": 25.64,
+          "how": "25.64"
+        },
+        "flat": {
+          "scene": 6.9,
+          "hand": 6.9,
+          "how": "6.9"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 15 Pro",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 132.44,
+          "hand": 132.44,
+          "how": "146.61 − 14.17"
+        },
+        "upside down": {
+          "scene": 14.17,
+          "hand": 14.17,
+          "how": "14.17"
+        },
+        "flat": {
+          "scene": 8.29,
+          "hand": 8.29,
+          "how": "8.29"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 113.2,
+          "hand": 113.2,
+          "how": "146.61 − 33.41"
+        },
+        "upside down": {
+          "scene": 33.41,
+          "hand": 33.41,
+          "how": "33.41"
+        },
+        "flat": {
+          "scene": 7.59,
+          "hand": 7.59,
+          "how": "7.59"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 122.82,
+          "hand": 122.82,
+          "how": "146.61 − 23.79"
+        },
+        "upside down": {
+          "scene": 23.79,
+          "hand": 23.79,
+          "how": "23.79"
+        },
+        "flat": {
+          "scene": 3.51,
+          "hand": 3.51,
+          "how": "3.51"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 15 Pro Max",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 145.69,
+          "hand": 145.69,
+          "how": "159.86 − 14.17"
+        },
+        "upside down": {
+          "scene": 14.17,
+          "hand": 14.17,
+          "how": "14.17"
+        },
+        "flat": {
+          "scene": 8.28,
+          "hand": 8.28,
+          "how": "8.28"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 126.45,
+          "hand": 126.45,
+          "how": "159.86 − 33.41"
+        },
+        "upside down": {
+          "scene": 33.41,
+          "hand": 33.41,
+          "how": "33.41"
+        },
+        "flat": {
+          "scene": 7.73,
+          "hand": 7.73,
+          "how": "7.73"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 136.07,
+          "hand": 136.07,
+          "how": "159.86 − 23.79"
+        },
+        "upside down": {
+          "scene": 23.79,
+          "hand": 23.79,
+          "how": "23.79"
+        },
+        "flat": {
+          "scene": 4.6,
+          "hand": 4.6,
+          "how": "4.6"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 16",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 134.02,
+          "hand": 134.02,
+          "how": "147.64 − 13.62"
+        },
+        "upside down": {
+          "scene": 13.62,
+          "hand": 13.62,
+          "how": "13.62"
+        },
+        "flat": {
+          "scene": 8.33,
+          "hand": 8.33,
+          "how": "8.33"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 116.3,
+          "hand": 116.3,
+          "how": "147.64 − 31.34"
+        },
+        "upside down": {
+          "scene": 31.34,
+          "hand": 31.34,
+          "how": "31.34"
+        },
+        "flat": {
+          "scene": 6.9,
+          "hand": 6.9,
+          "how": "6.9"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 16 Plus",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 147.27,
+          "hand": 147.27,
+          "how": "160.89 − 13.62"
+        },
+        "upside down": {
+          "scene": 13.62,
+          "hand": 13.62,
+          "how": "13.62"
+        },
+        "flat": {
+          "scene": 8.33,
+          "hand": 8.33,
+          "how": "8.33"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 129.55,
+          "hand": 129.55,
+          "how": "160.89 − 31.34"
+        },
+        "upside down": {
+          "scene": 31.34,
+          "hand": 31.34,
+          "how": "31.34"
+        },
+        "flat": {
+          "scene": 6.9,
+          "hand": 6.9,
+          "how": "6.9"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 16 Pro",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 135.44,
+          "hand": 135.44,
+          "how": "149.61 − 14.17"
+        },
+        "upside down": {
+          "scene": 14.17,
+          "hand": 14.17,
+          "how": "14.17"
+        },
+        "flat": {
+          "scene": 8.52,
+          "hand": 8.52,
+          "how": "8.52"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 116.2,
+          "hand": 116.2,
+          "how": "149.61 − 33.41"
+        },
+        "upside down": {
+          "scene": 33.41,
+          "hand": 33.41,
+          "how": "33.41"
+        },
+        "flat": {
+          "scene": 7.97,
+          "hand": 7.97,
+          "how": "7.97"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 125.82,
+          "hand": 125.82,
+          "how": "149.61 − 23.79"
+        },
+        "upside down": {
+          "scene": 23.79,
+          "hand": 23.79,
+          "how": "23.79"
+        },
+        "flat": {
+          "scene": 7.23,
+          "hand": 7.23,
+          "how": "7.23"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 16 Pro Max",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 148.86,
+          "hand": 148.86,
+          "how": "163.03 − 14.17"
+        },
+        "upside down": {
+          "scene": 14.17,
+          "hand": 14.17,
+          "how": "14.17"
+        },
+        "flat": {
+          "scene": 8.52,
+          "hand": 8.52,
+          "how": "8.52"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 129.62,
+          "hand": 129.62,
+          "how": "163.03 − 33.41"
+        },
+        "upside down": {
+          "scene": 33.41,
+          "hand": 33.41,
+          "how": "33.41"
+        },
+        "flat": {
+          "scene": 7.97,
+          "hand": 7.97,
+          "how": "7.97"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 139.24,
+          "hand": 139.24,
+          "how": "163.03 − 23.79"
+        },
+        "upside down": {
+          "scene": 23.79,
+          "hand": 23.79,
+          "how": "23.79"
+        },
+        "flat": {
+          "scene": 7.23,
+          "hand": 7.23,
+          "how": "7.23"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 16e",
+    "cameras": {
+      "main": {
+        "upright": {
+          "scene": 133.39,
+          "hand": 133.39,
+          "how": "146.71 − 13.32"
+        },
+        "upside down": {
+          "scene": 13.32,
+          "hand": 13.32,
+          "how": "13.32"
+        },
+        "flat": {
+          "scene": 6.08,
+          "hand": 6.08,
+          "how": "6.08"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 17",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 135.99,
+          "hand": 135.99,
+          "how": "149.61 − 13.62"
+        },
+        "upside down": {
+          "scene": 13.62,
+          "hand": 13.62,
+          "how": "13.62"
+        },
+        "flat": {
+          "scene": 8.44,
+          "hand": 8.44,
+          "how": "8.44"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 118.27,
+          "hand": 118.27,
+          "how": "149.61 − 31.34"
+        },
+        "upside down": {
+          "scene": 31.34,
+          "hand": 31.34,
+          "how": "31.34"
+        },
+        "flat": {
+          "scene": 7.01,
+          "hand": 7.01,
+          "how": "7.01"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone Air",
+    "cameras": {
+      "main": {
+        "upright": {
+          "scene": 139.89,
+          "hand": 139.89,
+          "how": "156.18 − 16.29"
+        },
+        "upside down": {
+          "scene": 16.29,
+          "hand": 16.29,
+          "how": "16.29"
+        },
+        "flat": {
+          "scene": 6.92,
+          "hand": 6.92,
+          "how": "6.92"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 17 Pro",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 135.64,
+          "hand": 135.64,
+          "how": "150.01 − 14.37"
+        },
+        "upside down": {
+          "scene": 14.37,
+          "hand": 14.37,
+          "how": "14.37"
+        },
+        "flat": {
+          "scene": 10.21,
+          "hand": 10.21,
+          "how": "10.21"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 116.4,
+          "hand": 116.4,
+          "how": "150.01 − 33.61"
+        },
+        "upside down": {
+          "scene": 33.61,
+          "hand": 33.61,
+          "how": "33.61"
+        },
+        "flat": {
+          "scene": 8.86,
+          "hand": 8.86,
+          "how": "8.86"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 126.02,
+          "hand": 126.02,
+          "how": "150.01 − 23.99"
+        },
+        "upside down": {
+          "scene": 23.99,
+          "hand": 23.99,
+          "how": "23.99"
+        },
+        "flat": {
+          "scene": 8.02,
+          "hand": 8.02,
+          "how": "8.02"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 17 Pro Max",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 149.06,
+          "hand": 149.06,
+          "how": "163.43 − 14.37"
+        },
+        "upside down": {
+          "scene": 14.37,
+          "hand": 14.37,
+          "how": "14.37"
+        },
+        "flat": {
+          "scene": 10.21,
+          "hand": 10.21,
+          "how": "10.21"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 129.82,
+          "hand": 129.82,
+          "how": "163.43 − 33.61"
+        },
+        "upside down": {
+          "scene": 33.61,
+          "hand": 33.61,
+          "how": "33.61"
+        },
+        "flat": {
+          "scene": 8.85,
+          "hand": 8.85,
+          "how": "8.85"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 139.44,
+          "hand": 139.44,
+          "how": "163.43 − 23.99"
+        },
+        "upside down": {
+          "scene": 23.99,
+          "hand": 23.99,
+          "how": "23.99"
+        },
+        "flat": {
+          "scene": 8.02,
+          "hand": 8.02,
+          "how": "8.02"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 17e",
+    "cameras": {
+      "main": {
+        "upright": {
+          "scene": 133.39,
+          "hand": 133.39,
+          "how": "146.71 − 13.32"
+        },
+        "upside down": {
+          "scene": 13.32,
+          "hand": 13.32,
+          "how": "13.32"
+        },
+        "flat": {
+          "scene": 6.08,
+          "hand": 6.08,
+          "how": "6.08"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 18 Pro",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 135.64,
+          "hand": 135.64,
+          "how": "150.01 − 14.37"
+        },
+        "upside down": {
+          "scene": 14.37,
+          "hand": 14.37,
+          "how": "14.37"
+        },
+        "flat": {
+          "scene": 10.76,
+          "hand": 10.76,
+          "how": "10.76"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 116.4,
+          "hand": 116.4,
+          "how": "150.01 − 33.61"
+        },
+        "upside down": {
+          "scene": 33.61,
+          "hand": 33.61,
+          "how": "33.61"
+        },
+        "flat": {
+          "scene": 7.81,
+          "hand": 7.81,
+          "how": "7.81"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 126.02,
+          "hand": 126.02,
+          "how": "150.01 − 23.99"
+        },
+        "upside down": {
+          "scene": 23.99,
+          "hand": 23.99,
+          "how": "23.99"
+        },
+        "flat": {
+          "scene": 8.43,
+          "hand": 8.43,
+          "how": "8.43"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone 18 Pro Max",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 149.06,
+          "hand": 149.06,
+          "how": "163.43 − 14.37"
+        },
+        "upside down": {
+          "scene": 14.37,
+          "hand": 14.37,
+          "how": "14.37"
+        },
+        "flat": {
+          "scene": 10.76,
+          "hand": 10.76,
+          "how": "10.76"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 129.82,
+          "hand": 129.82,
+          "how": "163.43 − 33.61"
+        },
+        "upside down": {
+          "scene": 33.61,
+          "hand": 33.61,
+          "how": "33.61"
+        },
+        "flat": {
+          "scene": 7.81,
+          "hand": 7.81,
+          "how": "7.81"
+        }
+      },
+      "telephoto": {
+        "upright": {
+          "scene": 139.44,
+          "hand": 139.44,
+          "how": "163.43 − 23.99"
+        },
+        "upside down": {
+          "scene": 23.99,
+          "hand": 23.99,
+          "how": "23.99"
+        },
+        "flat": {
+          "scene": 8.43,
+          "hand": 8.43,
+          "how": "8.43"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone Duo",
+    "cameras": {
+      "ultraWide": {
+        "upright": {
+          "scene": 102.55,
+          "hand": 102.55,
+          "how": "117.8 − 15.25"
+        },
+        "upside down": {
+          "scene": 15.25,
+          "hand": 15.25,
+          "how": "15.25"
+        },
+        "flat": {
+          "scene": 13.99,
+          "hand": 13.99,
+          "how": "13.99"
+        }
+      },
+      "main": {
+        "upright": {
+          "scene": 102.55,
+          "hand": 102.55,
+          "how": "117.8 − 15.25"
+        },
+        "upside down": {
+          "scene": 15.25,
+          "hand": 15.25,
+          "how": "15.25"
+        },
+        "flat": {
+          "scene": 12.55,
+          "hand": 12.55,
+          "how": "12.55"
+        }
+      }
+    }
+  },
+  {
+    "title": "iPhone SE (3rd generation)",
+    "cameras": {
+      "main": {
+        "upright": {
+          "scene": 128.2,
+          "hand": 128.2,
+          "how": "138.44 − 10.24"
+        },
+        "upside down": {
+          "scene": 10.24,
+          "hand": 10.24,
+          "how": "10.24"
+        },
+        "flat": {
+          "scene": 5.31,
+          "hand": 5.31,
+          "how": "5.31"
+        }
+      }
+    }
+  }
+]

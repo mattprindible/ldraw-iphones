@@ -1,0 +1,6 @@
+# Apple's drawings carry its proprietary notice: keep them out of the repository (iphone/README.md says where to get them).
+*.pdf
+# Generated: overlays and renders (node <model>/check.ts).
+renders/
+node_modules/
+.DS_Store

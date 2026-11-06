@@ -1,0 +1,140 @@
+{
+  "units": "positions in mm and in LDU (2.5 LDU per mm), in the part's own frame",
+  "frame": "origin at the product centre; -Y out of the screen, +Y out of the back; +X toward the side-button edge; +Z toward the top (receiver) end",
+  "extent": {
+    "mm": {
+      "x": [
+        -33.635,
+        33.635
+      ],
+      "y": [
+        -3.655,
+        4.525
+      ],
+      "z": [
+        -69.22,
+        69.22
+      ]
+    },
+    "note": "Y runs from the screen to the top of the lens rings (7.31 + 0.87)"
+  },
+  "cameras": {
+    "main": {
+      "name": "rear camera",
+      "window": {
+        "mm": [
+          23.195,
+          4.525,
+          58.98
+        ],
+        "ldu": [
+          57.988,
+          11.312,
+          147.45
+        ],
+        "note": "centre of the lens window, drawn flush with the ring top (its depth is not given)"
+      },
+      "coneApex": {
+        "mm": [
+          23.195,
+          1.655,
+          58.98
+        ],
+        "ldu": [
+          57.988,
+          4.137,
+          147.45
+        ],
+        "source": "derived: sheet 1, Detail D: 2.00 CONE TO BACK GLASS, from the 7.31 front: 7.31 - 2.00",
+        "note": "the keepout cone's apex: the drawing's own optical reference; the lens's entrance pupil is near it but not given"
+      },
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "keepoutCone": {
+        "fullAngleDeg": 76.7,
+        "source": "dimensioned: sheet 1, Detail D: 76.7° REAR CAMERA KEEPOUT CONE",
+        "note": "nothing of a mount may enter this cone from its apex: a design check, not the field of view"
+      },
+      "fieldOfView": {
+        "focalPx": 3261.6,
+        "diagonal": 75.38,
+        "long": 63.44,
+        "short": 49.74,
+        "image": [
+          4032,
+          3024
+        ],
+        "source": "derived from third-party: the Wide's 35 mm equivalent focal length as its photos' EXIF records it (3.99 mm, 28 mm equivalent); Apple's specifications give none",
+        "note": "pinhole model of the 4:3 still; the image's long side runs along the phone's length (Z). Video (16:9) crops the short side"
+      },
+      "sources": {
+        "fromSide": "dimensioned: sheet 1, back view: 10.44 (the camera's centre, from the side-button edge)",
+        "fromTop": "dimensioned: sheet 1, back view: 3X 10.24 (the camera's, the rear mic's and the flash's centres, from the top)"
+      }
+    },
+    "identity": "inferred: the only rear camera: the 12MP Wide (spec); its 76.7° cone encloses a 28 mm lens's 75.4° diagonal"
+  },
+  "flash": {
+    "mm": [
+      10.795,
+      3.655,
+      58.98
+    ],
+    "diameter": 3.75,
+    "sources": [
+      "dimensioned: sheet 1, back view: 22.84 (the flash's centre); Detail C: 12.40 from the camera's",
+      "dimensioned: sheet 1, back view: 3X 10.24 (the camera's, the rear mic's and the flash's centres, from the top)"
+    ],
+    "keepout": {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "apexFromFront": {
+        "mm": 5.96,
+        "source": "derived: sheet 1, Detail D: 1.35 CONE TO BACK GLASS (the 114° cone's apex inside it), from the 7.31 front: 7.31 - 1.35"
+      },
+      "innerConeDeg": {
+        "fullAngle": 114,
+        "source": "dimensioned: sheet 1, Detail D: 114° FLASH KEEPOUT CONE UNDER 1.44 mm"
+      },
+      "outerConeDeg": {
+        "fullAngle": 158,
+        "source": "dimensioned: sheet 1, Detail D: 158° FLASH KEEPOUT CONE BEYOND 1.44 mm"
+      },
+      "transitionFromFront": {
+        "mm": 8.75,
+        "source": "derived: sheet 1, Detail D: 1.44 FLASH KEEPOUT, out from the back glass to where the 158° cone starts: 7.31 + 1.44"
+      },
+      "note": "cones about the flash's axis, their apex inside the phone, measured from the front (screen) face as the section dimensions them"
+    }
+  },
+  "rearMic": {
+    "mm": [
+      15.505,
+      3.655,
+      58.98
+    ],
+    "diameter": 1.5,
+    "sources": [
+      "dimensioned: sheet 1, back view: 18.13 (the rear mic's centre, across)",
+      "dimensioned: sheet 1, back view: 3X 10.24 (the camera's, the rear mic's and the flash's centres, from the top)",
+      "dimensioned: sheet 1, back view: Ø1.50 REAR MIC"
+    ]
+  },
+  "mass": {
+    "grams": 144,
+    "source": "spec: Weight: 5.09 ounces (144 grams)",
+    "note": "centre of mass not given; the product centre is an assumption"
+  },
+  "image": {
+    "width": 4032,
+    "height": 3024,
+    "kind": "third-party",
+    "from": "the 12MP Wide's 4:3 stills, 4032 x 3024 (not on the spec page)"
+  }
+}

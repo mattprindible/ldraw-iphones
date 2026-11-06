@@ -1,0 +1,177 @@
+{
+  "units": "positions in mm and in LDU (2.5 LDU per mm), in the part's own frame",
+  "frame": "origin at the product centre; -Y out of the screen, +Y out of the back; +X toward the side-button edge; +Z toward the top (receiver) end",
+  "extent": {
+    "mm": {
+      "x": [
+        -35.76,
+        35.76
+      ],
+      "y": [
+        -3.9,
+        5.58
+      ],
+      "z": [
+        -73.355,
+        73.355
+      ]
+    },
+    "note": "Y runs from the screen to the top of the lens rings (7.8 + 1.68)"
+  },
+  "cameras": {
+    "main": {
+      "name": "rear camera",
+      "window": {
+        "mm": [
+          22.44,
+          5.58,
+          60.035
+        ],
+        "ldu": [
+          56.1,
+          13.95,
+          150.088
+        ],
+        "note": "centre of the lens window, drawn flush with the ring top (its depth is not given)"
+      },
+      "coneApex": {
+        "mm": [
+          22.44,
+          2.18,
+          60.035
+        ],
+        "ldu": [
+          56.1,
+          5.45,
+          150.088
+        ],
+        "source": "derived: sheet 2, Section L-L: 82° REAR CAMERA KEEPOUT CONE from its Ø5.91 BASE OF KEEPOUT CONE CONTACTING LENS COVER (1.68 + 7.80 = 9.48 from the front): 9.48 - 2.955 / tan 41°",
+        "note": "the keepout cone's apex: the drawing's own optical reference; the lens's entrance pupil is near it but not given"
+      },
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "keepoutCone": {
+        "fullAngleDeg": 82,
+        "source": "dimensioned: sheet 2, Section L-L: 82° REAR CAMERA KEEPOUT CONE",
+        "note": "nothing of a mount may enter this cone from its apex: a design check, not the field of view"
+      },
+      "fieldOfView": {
+        "focalPx": 3028.7,
+        "diagonal": 79.52,
+        "long": 67.3,
+        "short": 53.06,
+        "image": [
+          4032,
+          3024
+        ],
+        "source": "derived from spec: 48MP Fusion Main: 26 mm, ƒ/1.6 aperture",
+        "note": "pinhole model of the 4:3 still; the image's long side runs along the phone's length (Z). Video (16:9) crops the short side"
+      },
+      "sources": {
+        "fromSide": "dimensioned: sheet 1, Detail D: 13.32 (the camera's centre, across)",
+        "fromTop": "dimensioned: sheet 1, Detail D: 3X -13.32 (the camera's, the rear mic's and the flash's centres)"
+      }
+    },
+    "identity": "inferred: the only rear camera: the Fusion (spec); its 82° cone encloses a 26 mm lens's 79.5° diagonal"
+  },
+  "flash": {
+    "mm": [
+      6.08,
+      3.9,
+      60.035
+    ],
+    "diameter": 3.75,
+    "sources": [
+      "dimensioned: sheet 1, Detail D: 29.68 (FLASH)",
+      "dimensioned: sheet 1, Detail D: 3X -13.32 (the camera's, the rear mic's and the flash's centres)"
+    ],
+    "keepout": {
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "apexFromFront": {
+        "mm": 4.22,
+        "source": "derived: sheet 2, Section N-N: not dimensioned; the 80° cone through its Ø6.00 base on the back glass: 7.80 - 3.00 / tan 40° = 4.225"
+      },
+      "innerConeDeg": {
+        "fullAngle": 80,
+        "source": "dimensioned: sheet 2, Section N-N: 80° FLASH INNER KEEPOUT CONE (the only section through the flash, so taken as circular)"
+      },
+      "outerConeDeg": {
+        "fullAngle": 155,
+        "source": "dimensioned: sheet 2, Section N-N: 155° FLASH OUTER KEEPOUT CONE"
+      },
+      "transitionFromFront": {
+        "mm": 8.62,
+        "source": "derived: sheet 2, Section N-N: 0.82 FLASH KEEPOUT CONE TRANSITION TO BACK GLASS (its arrows on the back glass's face and the kinks' extension line), so 7.80 + 0.82 from the front"
+      },
+      "outerApexFromFront": {
+        "mm": 7.8,
+        "source": "derived: sheet 2, Section N-N: not dimensioned; the 155° cone through the Ø7.37 transition: 8.62 - 3.685 / tan 77.5° = 7.803, on the back glass's face"
+      },
+      "innerBaseDiameter": {
+        "mm": 6,
+        "source": "dimensioned: sheet 2, Section N-N: 6.00 DIAMETER OF KEEPOUT CONE BASE CONTACTING REAR GLASS (its extension lines on the inner cone's corners on the back glass's face, 7.80 from the front)"
+      },
+      "note": "cones about the flash's axis, their apex inside the phone, measured from the front (screen) face as the section dimensions them"
+    }
+  },
+  "rearMic": {
+    "mm": [
+      11.46,
+      3.9,
+      60.035
+    ],
+    "diameter": 1.3,
+    "sources": [
+      "dimensioned: sheet 1, Detail D: 24.30 (the ordinate above the view; its extension line comes down to the mic's centre)",
+      "dimensioned: sheet 1, Detail D: 3X -13.32 (the camera's, the rear mic's and the flash's centres)",
+      "dimensioned: sheet 1, Detail D: [2] Ø1.30 REAR MIC (its arrow lands on the outer of two concentric circles)"
+    ]
+  },
+  "magsafe": {
+    "centre": {
+      "mm": [
+        0,
+        3.9,
+        0.005
+      ],
+      "ldu": [
+        0,
+        9.75,
+        0.013
+      ],
+      "sources": [
+        "dimensioned: sheet 2, MagSafe view: 35.76 PRODUCT CENTER (71.52 / 2)",
+        "dimensioned: sheet 2, MagSafe view: -73.35 PRODUCT CENTER (146.71 / 2 = 73.355)"
+      ]
+    },
+    "clear": {
+      "diameter": 57.5,
+      "source": "dimensioned: sheet 2, MagSafe view: Ø57.50 (its leader on the clear area's circle; measure.ts fits the circle round the product centre)",
+      "note": "keep clear of metal, conductive or magnetic material"
+    },
+    "axis": [
+      0,
+      1,
+      0
+    ],
+    "note": "on the back glass, about the axis out of the back"
+  },
+  "mass": {
+    "grams": 169,
+    "source": "spec: Weight: 5.96 ounces (169 grams)",
+    "note": "centre of mass not given; the product centre is an assumption"
+  },
+  "image": {
+    "width": 4032,
+    "height": 3024,
+    "kind": "third-party",
+    "from": "4:3, the shape of the Fusion's 24MP default and 12MP stills; 4032 x 3024 is the usual 12MP size, not on the spec page"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "ldraw-iphones",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test 'src/*.test.ts' 'iphone/*.test.ts' 'iphone/models/iphone-13-mini/*.test.ts' 'library/*.test.ts'",
+    "typecheck": "tsc -p .",
+    "library": "node library/build.ts"
+  },
+  "description": "LDraw parts of Apple's iPhones, built from Apple's dimensional drawings",
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "playwright-core": "1.63.0",
+    "three": "0.186.1",
+    "typescript": "7.0.2"
+  }
+}
