@@ -83,6 +83,8 @@ To release, push the commit as usual, then tag it:
 git tag v1.1.0 && git push origin v1.1.0
 ```
 
+Pull requests to `main` must pass Test before they merge (a ruleset; the repository's admins can push directly).
+
 Version numbers: the major for a change that breaks how parts are used (a renamed file, a moved origin or frame),
 the minor for new models or changed geometry or features, the patch for corrections and documentation.
 
@@ -133,3 +135,11 @@ check), `render/` (a headless LDraw renderer: three.js in Chrome, with LDraw.org
   (it takes LEGO parts only).
 - **Drawings stay out of the repository:** each PDF carries Apple's proprietary notice (`.gitignore`).
 - **Not affiliated with Apple.** iPhone is a trademark of Apple Inc.
+
+## Contributing
+
+Found something wrong with a part? [Open an issue](https://github.com/mattprindible/ldraw-iphones/issues/new/choose):
+it asks for the model, the release and how you know. To fix it yourself: `npm install`, `npm run drawings`,
+`npm test`, then follow `CLAUDE.md` (Claude Code reads it on its own) and `docs/METHOD.md`; the pull request template
+has the checklist.
+

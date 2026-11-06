@@ -1,0 +1,55 @@
+name: A part looks wrong
+description: A part's shape, size, cameras, buttons or features don't match the phone or its drawing, or it misbehaves in an LDraw tool.
+labels: [part]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for playtesting. The more exact this is, the faster we can reproduce it against Apple's drawing.
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      description: The part's file name, or the phone.
+      placeholder: iphone-15-pro.dat
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Release
+      description: From the zip's name (ldraw-iphone-parts-vX.Y.Z), or the commit if you built it yourself.
+      placeholder: v0.9.0
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Where you saw it
+      description: The program and its version, or your code.
+      placeholder: BrickLink Studio 2.x, LDCad, LDView, my own script…
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong
+      description: What you expected and what you got. A screenshot helps a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: How you know
+      description: |
+        A measurement (from the real phone, Apple's drawing, or the part), a model file that shows it, or the steps to see it.
+        Please don't attach Apple's drawings: cite the sheet and detail instead (e.g. "sheet 2, Detail D").
+  - type: dropdown
+    id: area
+    attributes:
+      label: What it's about
+      options:
+        - The body (outline, thickness, corners)
+        - Cameras, flash, LiDAR or their keepouts
+        - Buttons, ports, speakers or mics
+        - features.json data
+        - How it renders or loads (colours, edges, BFC, errors)
+        - Something else
