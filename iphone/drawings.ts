@@ -5,7 +5,7 @@
 //   node iphone/drawings.ts --record <name>  record the SHA-256 of drawings/<name>.pdf (a new model, or a revision)
 //   node iphone/drawings.ts --check-apple    compare what Apple publishes now with what's recorded (CI, weekly)
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 export const DIR = join(import.meta.dirname, 'drawings');
@@ -37,6 +37,7 @@ async function download(url: string): Promise<Uint8Array> {
 /** Fetch every missing drawing and verify all of them; the problems found. */
 async function fetchAll(): Promise<string[]> {
   const problems: string[] = [];
+  mkdirSync(DIR, { recursive: true }); // a fresh clone has no drawings/: the PDFs are all it would hold
   for (const name of Object.keys(recorded())) {
     const path = join(DIR, `${name}.pdf`);
     if (!existsSync(path)) {
