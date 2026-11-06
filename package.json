@@ -8,7 +8,8 @@
   "scripts": {
     "test": "node --test 'src/*.test.ts' 'iphone/*.test.ts' 'iphone/models/iphone-13-mini/*.test.ts' 'library/*.test.ts'",
     "typecheck": "tsc -p .",
-    "library": "node library/build.ts"
+    "library": "node library/build.ts",
+    "drawings": "node iphone/drawings.ts"
   },
   "description": "LDraw parts of Apple's iPhones, built from Apple's dimensional drawings",
   "devDependencies": {

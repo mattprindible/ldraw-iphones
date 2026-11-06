@@ -1,0 +1,22 @@
+# Weekly: has Apple published a new iPhone drawing, revised one, or taken one down? The run fails if so, and GitHub
+# emails you about the failure; its log says which drawing and what changed.
+name: Apple's drawings
+
+on:
+  schedule:
+    - cron: '0 15 * * 1'   # Mondays, 15:00 UTC
+  workflow_dispatch:       # or run it now from the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Compare Apple's drawings with the recorded ones
+        run: node iphone/drawings.ts --check-apple

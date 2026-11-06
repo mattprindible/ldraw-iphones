@@ -1,0 +1,43 @@
+# Every push to main (and every pull request): fetch Apple's drawings, then run the whole suite, re-measuring
+# included. release.yml runs this same workflow before it publishes anything.
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:   # a "Run workflow" button on the Actions tab
+  workflow_call:       # lets release.yml reuse this workflow
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      # pdftoppm, for reading the drawings. (The overlays need ImageMagick and Chrome; the tests don't.)
+      - name: Install poppler
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      # Keep the PDFs between runs, so a run doesn't download them from Apple again. The key is drawings.json:
+      # record a new or revised drawing and the cache starts afresh. The cache is private to this repository.
+      - name: Cache Apple's drawings
+        uses: actions/cache@v6
+        with:
+          path: iphone/drawings/*.pdf
+          key: drawings-${{ hashFiles('iphone/drawings.json') }}
+
+      - name: Fetch and verify the drawings
+        run: npm run drawings
+
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test

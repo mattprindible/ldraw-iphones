@@ -79,7 +79,8 @@ Good starting points, by feature:
    a finding to resolve.
 8. Write the model's `README.md` like the others: files, known and assumed, what it taught.
 9. Register it: an import pair and a row in `iphone/models.ts`, a row in `library/README.md`'s table (title and
-   drawing date from its `drawing.ts`), and the count in the top-level README. Then `npm run library`, `npm test`,
+   drawing date from its `drawing.ts`), the count in the top-level README, and its drawing's SHA-256
+   (`node iphone/drawings.ts --record iphone-<model>`, into `iphone/drawings.json`, so CI can fetch it). Then `npm run library`, `npm test`,
    `npm run typecheck`, and `node iphone/scene.ts` (its camera heights).
 
 If the builder can't express something the drawing shows, model it as faithfully as the existing features allow,

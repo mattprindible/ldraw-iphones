@@ -19,15 +19,19 @@ and each model supplies its own numbers.
 | `*.test.ts` | the checks every model passes (`family.test.ts`), the builder's own (`part.test.ts`), the scenes' (`scene.test.ts`) |
 | `models/iphone-<model>/` | one folder per model: its `drawing.ts`, `measure.ts`, `part.ts`, `check.ts`, `README.md`, and the generated `.dat` and `features.json` |
 | `drawings/` | Apple's PDFs, one per model, named `iphone-<model>.pdf` (not in git) |
+| `drawings.ts`, `drawings.json` | fetching the PDFs from Apple and checking each is the drawing its part was read from (its SHA-256) |
 
 `models/iphone-13-mini/` is the worked example, the first model built: its README and tests go furthest.
 
 ## The drawings
 
 The PDFs carry Apple's proprietary notice, so they stay out of git (`.gitignore`). Apple publishes them, free and
-without an account, at https://developer.apple.com/accessories/dimensional-drawings/. Download each model's drawing
-and save it as `drawings/iphone-<model>.pdf`, the name the model's `measure.ts` expects. Only re-measuring and the
-overlays need them: without them the parts still build, and the re-measure tests skip.
+without an account, at https://developer.apple.com/accessories/dimensional-drawings/. `npm run drawings`
+(`drawings.ts`) downloads each one Apple lists into `drawings/iphone-<model>.pdf`, the name the model's `measure.ts`
+expects, and checks it is byte for byte the drawing the part was read from: `drawings.json` records each one's SHA-256.
+Only re-measuring and the overlays need them: without them the parts still build, and the re-measure tests skip (except
+in CI, where a missing drawing fails). `node iphone/drawings.ts --check-apple` compares what Apple publishes now with
+what's recorded; CI runs it weekly.
 
 ## Camera heights
 

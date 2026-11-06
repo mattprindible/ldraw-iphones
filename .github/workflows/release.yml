@@ -1,0 +1,38 @@
+# Pushing a version tag (git tag v1.2.0 && git push origin v1.2.0) publishes a release: the tests run first, and only
+# if they pass is library/dist/ zipped as ldraw-iphone-parts-v1.2.0.zip and attached to a new GitHub release.
+name: Release
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  release:
+    needs: test          # no release unless every test passed
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # to create the release
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Zip the library
+        run: |
+          name="ldraw-iphone-parts-${GITHUB_REF_NAME}"
+          cp -R library/dist "$name"
+          zip -r -X "$name.zip" "$name"
+          echo "ZIP=$name.zip" >> "$GITHUB_ENV"
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" "$ZIP" \
+            --title "iPhone LDraw parts ${GITHUB_REF_NAME}" \
+            --notes "Download **$ZIP** below: every part (\`parts/*.dat\`), its cameras, keepouts and buttons as data (\`features/*.json\`) and an example model. Its README says how to install them." \
+            --generate-notes

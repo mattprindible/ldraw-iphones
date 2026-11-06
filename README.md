@@ -29,6 +29,7 @@ src/                      reading PDFs, writing LDraw, geometry, rendering (for 
 iphone/                   the family: the shared builder, scenes and tests (iphone/README.md)
   models/iphone-<model>/  one folder per model: its drawing's numbers, re-measurement, part and README
   drawings/               Apple's PDFs (not in git)
+  drawings.json           each drawing's SHA-256; drawings.ts fetches and verifies them
   camera-heights.json     every camera's height in the standard poses
 library/                  the parts gathered for handing out: build.ts → dist/
 docs/
@@ -46,11 +47,13 @@ the first model built.
   `npm install` fetches the rest (TypeScript, three.js and playwright-core for the renderer).
 - **Google Chrome:** the renderer drives the installed Chrome (through playwright-core) for the overlays.
 - **poppler** (`pdftoppm`) and **ImageMagick** (`magick`): reading the drawings and composing the overlays.
-- **Apple's drawings in `iphone/drawings/`,** only to re-measure and for the overlays: they're public at
-  https://developer.apple.com/accessories/dimensional-drawings/ (see [`iphone/README.md`](iphone/README.md)).
+- **Apple's drawings in `iphone/drawings/`,** only to re-measure and for the overlays: `npm run drawings` fetches
+  them from https://developer.apple.com/accessories/dimensional-drawings/ and checks each against its recorded SHA-256
+  (see [`iphone/README.md`](iphone/README.md)).
 
 ```sh
 npm install
+npm run drawings                           # fetch Apple's drawings and verify them
 npm test                                   # every test (the re-measure tests skip without the drawings)
 npm run typecheck
 npm run library                            # every part into library/dist/
@@ -61,6 +64,27 @@ node iphone/models/iphone-13/check.ts      #   the part laid over the drawing's 
 ```
 
 To add a model, follow [`docs/METHOD.md`](docs/METHOD.md).
+
+## Automation and releases
+
+GitHub Actions (`.github/workflows/`) runs three things:
+
+- **Test** (`test.yml`), on every push to `main` and every pull request: fetches the drawings, then runs
+  `npm run typecheck` and `npm test`, re-measuring included.
+- **Release** (`release.yml`), on pushing a version tag: runs Test, and only if it passes zips `library/dist/` as
+  `ldraw-iphone-parts-v<version>.zip` and publishes it as a GitHub release, with notes from the commits since the
+  last one.
+- **Apple's drawings** (`apple-drawings.yml`), weekly: fails, and so emails you, if Apple has published a new iPhone
+  drawing, revised one or taken one down.
+
+To release, push the commit as usual, then tag it:
+
+```sh
+git tag v1.1.0 && git push origin v1.1.0
+```
+
+Version numbers: the major for a change that breaks how parts are used (a renamed file, a moved origin or frame),
+the minor for new models or changed geometry or features, the patch for corrections and documentation.
 
 ## The method
 
